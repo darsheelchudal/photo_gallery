@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-export const revalidate = 1;
+export const revalidate = 10;
 export const metadata: Metadata = {
   title: "Next JS Image Gallery",
   description: "Image Gallery where users can search for images",
