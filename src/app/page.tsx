@@ -1,7 +1,11 @@
-export default function Home() {
+import Gallery from "./components/Gallery";
+
+const Home = () => {
   return (
     <>
-      <div>Hello world</div>
+      <Gallery />
     </>
   );
-}
+};
+
+export default Home;

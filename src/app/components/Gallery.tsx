@@ -2,6 +2,7 @@ import fetchImages from "@/lib/fetchImages";
 import type { ImagesResults } from "@/models/Images.model";
 
 import React from "react";
+import ImgContainer from "./imgContainer";
 
 const Gallery = async () => {
   const url = "https://api.pexels.com/v1/curated";
@@ -12,12 +13,10 @@ const Gallery = async () => {
   console.log(images);
   return (
     <>
-      <section>
-        <ul>
-          {images.photos.map((photo) => (
-            <li key={photo.id}>{photo.src.large}</li>
-          ))}
-        </ul>
+      <section className="grid gap-2 grid-cols-gallery col-span-3 px-2 my-3">
+        {images.photos.map((photo) => (
+          <ImgContainer photo={photo} />
+        ))}
       </section>
     </>
   );
