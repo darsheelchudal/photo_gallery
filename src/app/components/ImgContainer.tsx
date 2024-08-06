@@ -6,6 +6,7 @@ type Props = {
 };
 
 export default function ImgContainer({ photo }: Props) {
+  console.log(photo);
   return (
     <>
       <div key={photo.id} className="h-64 bg-gray-200 rounded-xl ">
