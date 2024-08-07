@@ -1,6 +1,5 @@
 import { getPlaiceholder } from "plaiceholder";
 import type { Photo, ImagesResults } from "@/models/Images.model";
-import { promise } from "zod";
 
 const getBase64 = async (getImageUrl: string) => {
   try {

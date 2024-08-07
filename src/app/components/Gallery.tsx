@@ -9,7 +9,6 @@ type props = {
 };
 
 const Gallery = async ({ topic }: props) => {
-  console.log(topic);
   const url = !topic
     ? "https://api.pexels.com/v1/curated"
     : `https://api.pexels.com/v1/search?query=${topic}`;
@@ -18,10 +17,10 @@ const Gallery = async ({ topic }: props) => {
     return <h2 className="m-4 text-2xl">No Image Found</h2>;
   }
   const photosWithBlur = await addBlurredData(images);
-  console.log(images);
+  console.log(photosWithBlur);
   return (
     <>
-      <section className="grid gap-2 grid-cols-gallery col-span-3 px-2 my-3">
+      <section className="grid grid-cols-gallery col-span-3 px-1 my-3 auto-rows-[10px]">
         {photosWithBlur.map((photo) => (
           <ImgContainer photo={photo} key={photo.id} />
         ))}
